@@ -1,6 +1,6 @@
-import { version } from "../config";
+import config from "../config";
 
-export default (state=version, action) => {
+export default (state=config.version, action) => {
 	switch (action.type) {
 		case "load":
 			return action.data.version;

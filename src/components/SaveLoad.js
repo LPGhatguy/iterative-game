@@ -34,7 +34,7 @@ class SaveLoad extends React.Component {
 		const now = performance.now();
 		const sinceSave = (now - this.lastSave) / 1000;
 
-		if (sinceSave > 5) {
+		if (sinceSave >= 1) {
 			this.save();
 		}
 
@@ -48,6 +48,8 @@ class SaveLoad extends React.Component {
 		});
 
 		localStorage.setItem("save", save);
+
+		this.lastSave = performance.now();
 	}
 
 	load() {
