@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	line-height: inherit;
+	border: none;
+	font: inherit;
+}
+
+noscript {
+	font-size: 10rem;
+	font-weight: bold;
+}
+
+html {
+	font-size: 16px;
+	font-family: sans-serif;
+}

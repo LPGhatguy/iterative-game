@@ -1,0 +1,23 @@
+{
+	"extends": "react-app",
+	"rules": {
+		"quotes": ["warn", "double"],
+		"semi": ["warn", "always"],
+		"prefer-const": ["warn", {
+			"destructuring": "all"
+		}],
+		"comma-dangle": ["warn", {
+			"arrays": "always-multiline",
+			"objects": "always-multiline",
+			"imports": "always-multiline",
+			"exports": "always-multiline",
+			"functions": "ignore"
+		}],
+		"brace-style": ["warn", "1tbs"],
+		"indent": ["error", "tab", {
+			"SwitchCase": 1,
+			"MemberExpression": 1,
+			"ObjectExpression": 1
+		}]
+	}
+}
