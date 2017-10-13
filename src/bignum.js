@@ -5,7 +5,8 @@
  * Only the first value will have a fractional component.
  */
 
-const BASE = 100000;
+const BASE_EXP = 5;
+const BASE = 10 ** BASE_EXP;
 
 const bignum = {};
 
@@ -40,6 +41,12 @@ bignum.add = (first, second) => {
 
 	return result;
 };
+
+// This doesn't actually work.
+bignum.displaySimple = (num) => num
+	.map(value => value.toString())
+	.reverse()
+	.join("");
 
 bignum.unsafeResolve = (num) => {
 	let sum = 0;

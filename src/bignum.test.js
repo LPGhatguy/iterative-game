@@ -64,6 +64,22 @@ describe("bignum", () => {
 		});
 	});
 
+	describe("displaySimple", () => {
+		it("should work on small values", () => {
+			const value = [0];
+			const result = bignum.displaySimple(value);
+
+			expect(result).toEqual("0");
+		});
+
+		it("should work on multiple slot values", () => {
+			const value = [12345, 12345, 12];
+			const result = bignum.displaySimple(value);
+
+			expect(result).toEqual("123451234512");
+		});
+	});
+
 	it("should unsafeResolve", () => {
 		const num = bignum.create();
 
