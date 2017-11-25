@@ -1,5 +1,10 @@
+const defaultValues = () => ({
+	aGenerators: 0,
+	aGeneratorGenerators: 0,
+});
+
 export default (state, action) => {
-	state = state || {};
+	state = state || defaultValues();
 
 	switch (action.type) {
 		case "setValue":
@@ -10,6 +15,9 @@ export default (state, action) => {
 
 		case "load":
 			return action.data.values;
+
+		case "restart":
+			return defaultValues();
 
 		default:
 			return state;
