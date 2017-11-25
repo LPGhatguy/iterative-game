@@ -2,14 +2,14 @@ export default (state, action) => {
 	state = state || {};
 
 	switch (action.type) {
-		case "setFlag":
+		case "setValue":
 			return {
 				...state,
 				[action.name]: action.value,
 			};
 
 		case "load":
-			return action.data.flags;
+			return action.data.values;
 
 		default:
 			return state;

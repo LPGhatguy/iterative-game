@@ -2,12 +2,12 @@ import { combineReducers } from "redux";
 
 import resources from "./resources";
 import version from "./version";
-import flags from "./flags";
+import values from "./values";
 
 const reducer = combineReducers({
 	resources,
 	version,
-	flags,
+	values,
 });
 
 export default reducer;

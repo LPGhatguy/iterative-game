@@ -1,5 +1,5 @@
 export default (name, value) => ({
-	type: "setFlag",
+	type: "setValue",
 	name,
 	value,
 });
