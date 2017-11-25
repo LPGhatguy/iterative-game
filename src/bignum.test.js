@@ -73,10 +73,43 @@ describe("bignum", () => {
 		});
 
 		it("should work on multiple slot values", () => {
-			const value = [12345, 12345, 12];
-			const result = bignum.displaySimple(value);
+			let value = [12345, 12345, 12];
+			let result = bignum.displaySimple(value);
 
 			expect(result).toEqual("123451234512");
+
+			value = [12, 340, 56];
+			result = bignum.displaySimple(value);
+
+			expect(result).toEqual("1234056");
+		});
+
+		it("should work on decimals", () => {
+			const value = [123, 123, 123, 0.1];
+			const result = bignum.displaySimple(value);
+
+			expect(result).toEqual("123123123.1");
+		});
+	});
+
+	describe("displayEnglish", () => {
+		it("should work on small values", () => {
+			const value = [0];
+			const result = bignum.displayEnglish(value);
+
+			expect(result).toEqual("0");
+		});
+
+		it("should work on multiple slot values", () => {
+			let value = [12345, 12345, 12];
+			let result = bignum.displayEnglish(value);
+
+			expect(result).toEqual("123,451,234,512");
+
+			value = [12, 340, 56];
+			result = bignum.displayEnglish(value);
+
+			expect(result).toEqual("1,234,056");
 		});
 	});
 

@@ -4,6 +4,7 @@
 	line-height: inherit;
 	border: none;
 	font: inherit;
+	box-sizing: border-box;
 }
 
 noscript {
