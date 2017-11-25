@@ -45,6 +45,7 @@ class SaveLoad extends React.Component {
 		const save = JSON.stringify({
 			version: this.props.version,
 			resources: this.props.resources,
+			flags: this.props.flags,
 		});
 
 		localStorage.setItem("save", save);
@@ -85,7 +86,7 @@ class SaveLoad extends React.Component {
 	}
 }
 
-const mapStateToProps = ({ version, resources }) => ({ version, resources });
+const mapStateToProps = ({ version, resources, flags }) => ({ version, resources, flags });
 const mapDispatchToProps = (dispatch) => ({
 	load: (data) => dispatch(load(data)),
 });
