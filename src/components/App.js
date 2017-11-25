@@ -1,32 +1,24 @@
 import React from "react";
-import { connect } from "react-redux";
 
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
 import Progress from "./Progress";
 import SaveLoad from "./SaveLoad";
-import bignum from "../bignum";
 
 import "./App.css";
 
-let App = ({ resources }) => {
-	const children = [];
-
-	for (const key in resources) {
-		children.push(<div key={ key }>
-			{ key }: { bignum.displaySimple(bignum.floor(resources[key])) }
-		</div>);
-	}
-
+const App = () => {
 	return (
 		<div className="App">
-			{ children }
+			<Header />
+			<Main />
+			<Footer />
+
 			<SaveLoad />
 			<Progress />
 		</div>
 	);
 };
-
-const mapStateToProps = x => x;
-
-App = connect(mapStateToProps)(App);
 
 export default App;
